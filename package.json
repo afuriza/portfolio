@@ -1,6 +1,10 @@
 {
   "name": "affriza-portfolio",
   "version": "1.0.0",
+  "engineStrict" : true,
+  "engines": {
+    "node": ">=8.5.0"
+  },
   "private": true,
   "scripts": {
     "build": "node ace build --production",
