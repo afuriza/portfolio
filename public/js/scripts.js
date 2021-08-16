@@ -7,6 +7,15 @@
 // Scripts
 // 
 
+window.addEventListener('click', event => {
+    const navbarToggler = document.body.querySelector('.navbar-toggler');
+    const isShownCollapse = document.getElementById('navbarResponsive').classList.contains('show');
+
+    if ((window.getComputedStyle(navbarToggler).display !== 'none') && isShownCollapse) {
+        navbarToggler.click();
+    }
+});
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function

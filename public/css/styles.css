@@ -3997,8 +3997,10 @@ textarea.form-control-lg {
   line-height: 1;
   background-color: transparent;
   /* border: 1px solid transparent; */
-  border-radius: 0.25rem;
-  transition: box-shadow 0.15s ease-in-out;
+  /* border-radius: 0.25rem; */
+  /* transition: box-shadow 0.15s ease-in-out; */
+  border: none;
+  transition: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
@@ -4007,6 +4009,7 @@ textarea.form-control-lg {
 }
 .navbar-toggler:hover {
   text-decoration: none;
+  background-color: #ffc800;
 }
 .navbar-toggler:focus {
   text-decoration: none;
