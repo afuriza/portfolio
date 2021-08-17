@@ -31,10 +31,41 @@ export default class PersonInfProvider {
     return projects
   }
 
+  private provideExperience(){
+    var experience = {
+      job: [
+        {
+          name: "Estoh.id",
+          jobstack: "Fullstack Object Pascal Developer",
+          year: "9999 - 9999",
+          desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+        }
+      ],
+      education: [
+        {
+          name: "SMK Unggulan NU",
+          type: "Vocational Highschool",
+          slug: "Computer and Network Engineering",
+          year_of_study: "2011 - 2014"
+        }
+      ],
+      awards: [
+        {
+          name: "UPT-PPPK Jawa Timur",
+          topic: "Informatics Engineering Contest for Vocational Highschool",
+          year: "2013"
+        }
+      ]
+    }
+
+    return experience
+  }
+
   public get() {
     var person = {
       person_data: this.providePersonInf(),
-      projects: this.provideProjects()
+      projects: this.provideProjects(),
+      experience: this.provideExperience()
     }
 
     return person
