@@ -24,7 +24,14 @@ export default class PersonInfProvider {
       {
         name: "Kyoukai Framework",
         slug: "Simple Framework for Object Pascal Web Application",
-        img: "img/portfolio/kyokai.png"
+        img: "img/portfolio/kyokai.png",
+        source: "https://github.com/afuriza/kyoukai_framework"
+      },
+      {
+        name: "Kopkar Kanitra",
+        slug: "eCommerce Website built with Laravel Framework",
+        img: "img/portfolio/kanitra.png",
+        live: "https://web.kopkarkanitra.co.id/"
       }
     ]
 
@@ -35,10 +42,19 @@ export default class PersonInfProvider {
     var experience = {
       job: [
         {
+          name: "Freelance Worker",
+          jobstack: "Front End PHP Developer",
+          year: "2020 - now",
+          desc: "Working for various custom applications from multiple clients."
+        },
+        {
           name: "Estoh.id",
           jobstack: "Fullstack Object Pascal Developer",
-          year: "9999 - 9999",
-          desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+          year: "2018 - 2020",
+          desc: `Using both Delphi and Lazarus to create robust and
+          fast apps to run SMS Gateway Server and Retail Software
+          Package, including Android App for Warehouse Stock Opname
+          by using Lazarus and LAMW framework.`
         }
       ],
       education: [

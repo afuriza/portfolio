@@ -3,26 +3,48 @@
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Projects</h2>
-            <h3 class="section-subheading text-muted">Side projects I've been created</h3>
+            <h3 class="section-subheading text-muted">Latest projects I created</h3>
         </div>
         <div class="row">
+            @each(project in projects) 
             <div class="col-lg-4 col-sm-6 mb-4">
-                @each(project in projects)
+                
                 <!-- Portfolio item-->
                 <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                    @if(project.live)
+                    <a class="portfolio-link" target="_blank" href="{{project.live}}">
+                    @else 
+                    <a class="portfolio-link">
+                    @endif
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="{{project.img}}" alt="..." />
+                        <img class="img-center-cropped img-fluid" src="{{project.img}}" alt="..." />
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">{{project.name}}</div>
                         <div class="portfolio-caption-subheading text-muted">{{project.slug}}</div>
+                        
                     </div>
+                    <div class="portfolio-caption">
+                        <div class="btn-group btn-group-sm" role="group" aria-label="">
+                            @if(project.live)
+                            <a type="button" class="btn btn-secondary"  target="_blank" href="{{project.live}}"><i class="fa fa-globe"></i> Live</a>
+                            @else
+                            <button type="button" class="btn btn-secondary" disabled><i class="fa fa-globe"></i> Live</button>
+                            @endif
+                            @if(project.source)
+                            <a type="button" class="btn btn-secondary" target="_blank" href="{{project.source}}"><i class="fab fa-git"></i> Source</a>
+                            @else
+                            <button type="button" class="btn btn-secondary" disabled><i class="fab fa-git"></i> Source</button>
+                            @endif
+                        </div>
+                    </div>
+                    
                 </div>
-                @end
+                
             </div>
+            @end
 
         </div>
     </div>

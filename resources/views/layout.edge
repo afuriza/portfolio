@@ -32,7 +32,14 @@
         @!component('components/portfolio-grid', {
             projects: person.projects
         })  
-        @!component('components/experience') 
+        @!component('components/experience', {
+            experience: person.experience
+        })
+        @!component('components/contact') 
+        @!component('components/footer', {
+            person: person.person_data
+        })
+        
         {{--  @component('components/dummy')
         @end  --}}
         <!-- Bootstrap core JS-->
